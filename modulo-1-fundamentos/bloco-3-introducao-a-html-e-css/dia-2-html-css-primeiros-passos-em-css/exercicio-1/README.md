@@ -1,6 +1,8 @@
 # Exercicios do segundo dia, aqui estão os exercícios sobre fundamentos de CSS.
 
-### Exercício 1 - Nos deram o template HTML e as seguintes instruções para modificar o .html usando .css:
+### Exercício 1
+
+Fornecido pela Trybe um template com um código em .html com o objetivo de testar os conhecimentos adquiridos no segundo dia para manipular o html usando css.  
 
 #### Parte 1 
 
