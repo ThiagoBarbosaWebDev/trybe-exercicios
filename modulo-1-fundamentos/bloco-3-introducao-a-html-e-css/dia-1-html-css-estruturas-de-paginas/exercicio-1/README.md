@@ -1,4 +1,6 @@
-# Exercicios do primeiro dia, aqui estão os exercícios resolvidos sobre fundamentos de HTML.
+# Exercicios Bloco 3, Dia 1 
+
+Exercícios feito para desenvolver fundamentos sobre HTML, estruturação, tags básicas e afins.
 
 ## Exercício 1 - Dado um template em HTML com as seguintes instruções para serem executadas: 
 
