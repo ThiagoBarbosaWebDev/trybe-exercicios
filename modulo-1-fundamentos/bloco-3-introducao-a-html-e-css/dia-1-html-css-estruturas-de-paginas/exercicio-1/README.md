@@ -2,7 +2,7 @@
 
 Exercícios feito para desenvolver fundamentos sobre HTML, estruturação, tags básicas e afins.
 
-## Exercício 1 - Dado um template em HTML com as seguintes instruções para serem executadas: 
+### Exercício 1 - Dado um template em HTML com as seguintes instruções para serem executadas: 
 
 ### Parte 1 
 
