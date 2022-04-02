@@ -4,7 +4,7 @@ Exercícios feito para desenvolver fundamentos sobre HTML, estruturação, tags 
 
 ### Exercício 1 - Dado um template em HTML com as seguintes instruções para serem executadas: 
 
-### Parte 1 
+#### Parte 1 
 
 1 - Crie uma lista das pessoas que você já fez amizade na Trybe.
 
@@ -12,7 +12,7 @@ Exercícios feito para desenvolver fundamentos sobre HTML, estruturação, tags 
 
 3 - Adicione uma imagem que está no seu computador, local.
 
-### Parte 2
+#### Parte 2
 
 1 - Crie um parágrafo para cada pessoa da sua lista.
 
