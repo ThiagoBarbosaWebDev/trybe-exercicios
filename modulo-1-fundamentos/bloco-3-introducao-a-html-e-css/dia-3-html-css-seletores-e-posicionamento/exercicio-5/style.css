@@ -1,0 +1,63 @@
+ol li {
+background-color: yellow;
+}
+
+ol li:nth-child(even) {
+    color: green;
+}
+
+ol li:nth-child(odd) {
+    text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: red;
+}
+
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+    font-size: 40px;
+    border: 1px solid black;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: 700;
+}
+
+ol + h3 + ul li:nth-child(-n+3) {
+    color: blue;
+}
+
+.java {
+    background-color: pink;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+a[href*="stack"]:hover {
+    color: rgb(60, 255, 0);
+}
+
+a[href*="w3"]:hover {
+    color: rgb(251, 255, 0);
+}
+
+a[href*="mozilla"]:hover {
+    color: rgb(0, 255, 234);
+}
+
+a[href*="devdocs"]:hover {
+    color: rgb(255, 0, 0);
+}
+
+a[href*="trybe"]:hover {
+    color: rgb(255, 0, 242);
+}
+
+
+
