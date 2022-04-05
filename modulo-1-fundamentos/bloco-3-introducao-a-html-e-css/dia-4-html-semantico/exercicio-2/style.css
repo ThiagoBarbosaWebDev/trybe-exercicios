@@ -14,6 +14,8 @@ body {
 header {
     background-color: #F8AD9D;
     box-shadow: 0px 9px 15px 2px #F8AD9D;
+    background: url(https://www.jornalciencia.com/wp-content/uploads/2017/04/mantis-camarao-1-1000x500.jpg);
+    background-size: cover;
 }
 
 .title-wrapper {
@@ -25,7 +27,12 @@ header {
 h1 {
     margin-top: 100px;
     margin-bottom: 100px;
-   
+    width: 100%;
+    background-color: #F08080;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -53,16 +60,44 @@ nav ul {
     justify-content: center;
 }
 
+.main-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    margin-right: 50px 5%;
+    background-color: #F8AD9D;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 50px 0 0 50px;
+    height: 500px;
+}
+
 main {
     background-color: #F8AD9D;
-    margin: 50px 10%;
+    margin: 50px 1% 50px 5%;
     padding: 50px;
     border-radius: 50px;
     text-align: center;
 }
 
+table {
+    margin: auto;
+}
+
+td {
+    padding: 15px;
+}
+
 h2 {
     text-align: center;
+    margin-bottom: 75px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 p {
@@ -91,3 +126,17 @@ h1, nav {
     margin-bottom: 50px;
 }
 
+footer h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+footer {
+    background-color: #F08080;
+    padding: 20px;
+    text-align: center;
+}
