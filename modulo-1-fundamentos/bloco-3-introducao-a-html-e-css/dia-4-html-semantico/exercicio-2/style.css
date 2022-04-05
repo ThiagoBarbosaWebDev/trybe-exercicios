@@ -5,6 +5,10 @@ F8AD9D
 F4978E
 F08080 */
 
+* {
+    padding: 0;
+}
+
 body {
     background-color: #FFDAB9;
     padding: 0;
@@ -62,7 +66,7 @@ nav ul {
 
 .main-wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 
 aside {
@@ -119,6 +123,10 @@ h1, nav {
     margin-bottom: 50px;
 }
 
+caption {
+    margin-bottom: 25px;
+}
+
 .conteudo {
     background-color: #FBC4AB;
     padding: 50px;
@@ -126,17 +134,37 @@ h1, nav {
     margin-bottom: 50px;
 }
 
-footer h2 {
+h2 {
     text-align: center;
     margin-bottom: 25px;
 }
 
 ul {
     list-style-type: none;
+    text-align: center;
+}
+
+.referencias {
+    margin-bottom: 50px;
+}
+
+.referencias-links {
+    padding: 0;
 }
 
 footer {
     background-color: #F08080;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+    margin: auto;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.4em;
+}
+
+a {
+    color: black;
 }
