@@ -1,0 +1,170 @@
+/* https://coolors.co/palette/f08080-f4978e-f8ad9d-fbc4ab-ffdab9 */
+/* FFDAB9
+FBC4AB
+F8AD9D
+F4978E
+F08080 */
+
+* {
+    padding: 0;
+}
+
+body {
+    background-color: #FFDAB9;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background-color: #F8AD9D;
+    box-shadow: 0px 9px 15px 2px #F8AD9D;
+    background: url(https://www.jornalciencia.com/wp-content/uploads/2017/04/mantis-camarao-1-1000x500.jpg);
+    background-size: cover;
+}
+
+.title-wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    background-color: #F08080;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+nav {
+margin: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    max-width: 50%;    
+    margin: auto;
+    height: 50px;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: #F08080;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 0 15px 15px 15px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+aside {
+    margin-right: 50px 5%;
+    background-color: #F8AD9D;
+    padding: 20px;
+    margin-top: 50px;
+    border-radius: 50px 0 0 50px;
+    height: 500px;
+}
+
+main {
+    background-color: #F8AD9D;
+    margin: 50px 1% 50px 5%;
+    padding: 50px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    padding: 15px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+    margin-bottom: 50px;
+}
+
+img {
+    height: 400px;
+    width: 400px;
+}
+
+h1, nav {
+    text-align: center;
+}
+
+.table {
+    margin-bottom: 50px;
+}
+
+caption {
+    margin-bottom: 25px;
+}
+
+.conteudo {
+    background-color: #FBC4AB;
+    padding: 50px;
+    border-radius: 50px;
+    margin-bottom: 50px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.referencias {
+    margin-bottom: 50px;
+}
+
+.referencias-links {
+    padding: 0;
+}
+
+footer {
+    background-color: #F08080;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+footer p {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.4em;
+}
+
+a {
+    color: black;
+}
