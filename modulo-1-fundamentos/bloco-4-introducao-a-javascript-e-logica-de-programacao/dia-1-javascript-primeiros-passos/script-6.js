@@ -1,27 +1,27 @@
-let peca = "kiNg";
+let peca = "kiNg"
 
 switch (peca.toLowerCase()){
-  case peca = "pawn": 
+  case "pawn": 
   console.log("moves ahead one square, first turn moves two");
   break;
 
-  case peca = "rook": 
+  case "rook": 
   console.log("moves one direction vertically or horizontally, fowards or backwards, as many squares as desired");
   break;
 
-  case peca = "knight": 
+  case "knight": 
   console.log("moves in 'L' shaped movements, in any direction");
   break;
 
-  case peca = "bishop": 
+  case "bishop": 
   console.log("moves diagonally, fowards and backwards, as many squares as desired");
   break;
 
-  case peca = "queen": 
+  case "queen": 
   console.log("moves horizontally, vertically, diagonally, as many squares as desired");
   break;
 
-  case peca = "king": 
+  case "king": 
   console.log("moves one square in any direction");
   break;
 

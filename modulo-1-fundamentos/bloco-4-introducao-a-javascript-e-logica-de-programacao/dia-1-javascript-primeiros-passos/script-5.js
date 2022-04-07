@@ -1,11 +1,9 @@
-const a = 40;
-const b = 60;
+const a = 0;
+const b = 100;
 const c = 80;
-const triangle = 180
 
-if (a+b+c===triangle) {
-  console.log(true)
-} else if (a+b+c<0) {
-  console.log("ERROR - triangle angles sum must be >0")
+if (a > 0 && b > 0 && c > 0 && a + b + c === 180) {
+  console.log(true);
+} else {
+  console.log(false);
 }
-else {console.log(false)}
