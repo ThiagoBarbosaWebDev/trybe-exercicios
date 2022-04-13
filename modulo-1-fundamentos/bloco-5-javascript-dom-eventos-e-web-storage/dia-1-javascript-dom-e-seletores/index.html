@@ -48,11 +48,6 @@
         - document.getElementById()
         - document.getElementsByClassName()
         - document.getElementsByTagName()
-
-
-
- Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
-
         */
       // Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos. (Não gaste tempo pensando no texto e sim realizando o exercício)
       document.getElementsByTagName("p")[0].innerText =
@@ -69,11 +64,13 @@
         "Exercício 5.1 - JavaScript";
       // Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
       let paragraph = document.getElementsByTagName("p");
-      for (let i=0; i < paragraph.length; i++) {
+      for (let i = 0; i < paragraph.length; i++) {
         paragraph[i].style.textTransform = "uppercase";
       }
       // Crie uma função que exiba o conteúdo de todas as tags <p> no console.
-      for (p of paragraph) {console.log(p.innerHTML)};
+      for (p of paragraph) {
+        console.log(p.innerHTML);
+      }
     </script>
   </body>
 </html>
