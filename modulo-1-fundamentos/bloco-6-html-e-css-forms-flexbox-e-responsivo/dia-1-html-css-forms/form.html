@@ -7,45 +7,49 @@
     <title>Document</title>
   </head>
   <body>
-    <form action="" method="get">
+    <form action="" method="get" id="form-id">
       <label for="nome-id"
         >Nome Completo:
-        <input 
-        type="text" 
-        name="nome-name" 
-        id="nome-id"
-        minlength="10ch"
-        maxlength="40ch"
-         />
+        <input
+          type="text"
+          name="nome-name"
+          id="nome-id"
+          minlength="10ch"
+          maxlength="40ch"
+        />
       </label>
       <br />
       <label for="email-id"
         >E-mail:
-        <input 
-        type="email" 
-        name="email-name" 
-        id="email-id"
-        minlength="10ch"
-        maxlength="50ch"
+        <input
+          type="email"
+          name="email-name"
+          id="email-id"
+          minlength="10ch"
+          maxlength="50ch"
         />
       </label>
       <br />
 
       <label for="radio-opt-cidade">
         <input type="radio" name="radio" id="radio-opt-cidade" />
-        Cidade</label>
+        Cidade</label
+      >
 
       <label for="radio-opt-campo">
         <input type="radio" name="radio" id="radio-opt-campo" />
-        Campo</label>
+        Campo</label
+      >
 
       <label for="radio-opt-praias">
         <input type="radio" name="radio" id="radio-opt-praias" />
-        Praia</label>
+        Praia</label
+      >
 
       <label for="radio-opt-montanhas">
         <input type="radio" name="radio" id="radio-opt-montanhas" />
-        Montanhas</label>
+        Montanhas</label
+      >
       <br />
       <label for="textarea-id">
         Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
@@ -69,20 +73,22 @@
       <label for="checkbox-id">
         <input type="checkbox" name="checkbox-name" id="checkbox-id" />
         Gostaria de receber outras incríveis oportunidades oferecidas pela
-        Trybe?</label>
+        Trybe?</label
+      >
       <br />
       <label for="agreement-checkbox">
         <input type="checkbox" name="checkbox-name2" id="agreement-checkbox" />
         Concordo que imagens das minhas férias poderão ser usadas na divulgação
-        de concursos futuros.</label>
+        de concursos futuros.</label
+      >
       <br />
       <label for="">
         <input type="file" name="" id="" accept=".png,.jpg" />
-        Nos envie sua foto</label>
+        Nos envie sua foto</label
+      >
       <br />
       <button type="submit" id="submit-button" disabled>SUBMIT</button>
-
-      <button type="reset">RESET</button>
+      <button type="button" id ="clear">RESET</button>
     </form>
     <script src="script.js"></script>
   </body>

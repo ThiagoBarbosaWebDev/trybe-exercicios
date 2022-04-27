@@ -1,13 +1,24 @@
-const button = document.querySelector('#submit-button')
+window.onload = function () {
+  const clearButton = document.querySelector("#clear");
+  clearButton.addEventListener("click", clearForm);
+  const button = document.querySelector("#submit-button");
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+  const agreement = document.querySelector("#agreement-checkbox");
+  agreement.addEventListener("change", function () {
+    const submitButton = document.querySelector("#submit-button");
+    submitButton.disabled = !agreement.checked;
+  });
+};
 
-button.addEventListener('click', e => {
-  e.preventDefault()
-})
+function clearForm() {
+  const formInputs = document.querySelectorAll("input");
+  const textArea = document.querySelector("textarea");
 
-function enableSubmit() {
-  const agreement = document.querySelector('#agreement-checkbox')
-  const submitButton = document.querySelector('#submit-button')
-  submitButton.disabled = !agreement.checked
+  for (field of formInputs) {
+    field.value = "";
+    field.checked = false;
+  }
+  textArea.value = "";
 }
-
-agreement.addEventListener('change', enableSubmit);
