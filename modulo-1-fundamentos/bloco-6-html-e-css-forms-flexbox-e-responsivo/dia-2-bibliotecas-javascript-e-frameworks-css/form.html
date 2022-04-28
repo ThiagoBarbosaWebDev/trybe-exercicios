@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
+    <script src="dist/js/DatePickerX.min.js"></script>
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  </head>
+  <body>
+    <form action="" method="get" id="form-id">
+      <label for="nome-id"
+        >Nome Completo:
+        <input
+          type="text"
+          name="nome-name"
+          id="nome-id"
+          class="form-control form__input"
+        />
+      </label>
+      <br />
+      <label for="email-id"
+        >E-mail:
+        <input
+          type="email"
+          name="email-name"
+          id="email-id"
+          minlength="10ch"
+          maxlength="50ch"
+        />
+      </label>
+      <br />
+
+      <label for="communication_radio_group">
+        <input type="radio" name="radio" id="communication_radio_group" />
+        Cidade</label
+      >
+
+      <label for="communication_radio_group1">
+        <input type="radio" name="radio" id="communication_radio_group1" />
+        Campo</label
+      >
+
+      <label for="communication_radio_group2">
+        <input type="radio" name="radio" id="communication_radio_group2" />
+        Praia</label
+      >
+
+      <label for="communication_radio_group3">
+        <input type="radio" name="radio" id="communication_radio_group3" />
+        Montanhas</label
+      >
+      <br />
+      <label for="textarea-id">
+        Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+        TrybeTrip?  
+        <br />
+        <textarea
+          name="textarea-name"
+          id="textarea-id"
+          cols="30"
+          rows="10"
+        ></textarea>
+      </label>
+      <br />
+      
+      <label for="date-id" class="real"> Dia de Ida </label>
+      <input type="date" name="date-name" id="date-id" />
+      <br>
+      <label for="date-id" class="real"> Dia de Retorno </label>
+      <input type="date" name="date-name" id="date-id" />
+     
+      <br />
+      <label for="checkbox-id">
+        <input type="checkbox" name="checkbox-name" id="checkbox-id" />
+        Gostaria de receber outras incríveis oportunidades oferecidas pela
+        Trybe?</label
+      >
+      <br />
+      <label for="agreement-checkbox">
+        <input
+          type="checkbox"
+          name="checkbox-name2"
+          id="agreement-checkbox"
+          required
+        />
+        Concordo que imagens das minhas férias poderão ser usadas na divulgação
+        de concursos futuros.</label
+      >
+      <br />
+      <label for="">
+        <input type="file" name="" id="" accept=".png,.jpg" />
+        Nos envie sua foto</label
+      >
+      <br />
+      <button type="submit" id="submit-button" disabled>SUBMIT</button>
+      <button type="button" id="clear">RESET</button>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
