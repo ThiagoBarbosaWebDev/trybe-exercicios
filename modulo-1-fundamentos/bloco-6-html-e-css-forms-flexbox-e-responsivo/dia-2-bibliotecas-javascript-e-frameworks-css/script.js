@@ -102,47 +102,56 @@ validation
   .addField('#nome-id', [
     {
       rule: 'required',
-      errorMessage: 'Name is required',
+      errorMessage: 'Preencha seu nome',
     },
     {
       rule: 'minLength',
       value: 10,
-      errorMessage: 'Name is too short!',
+      errorMessage: 'Nome inválido: abaixo de 10 caracteres',
     },
     {
       rule: 'maxLength',
       value: 40,
-      errorMessage: 'Name is too long',
+      errorMessage: 'Nome inválido: acima de 40 caracteres',
     },
   ])
   .addField('#email-id', [
     {
       rule: 'required',
-      errorMessage: 'Email is required',
+      errorMessage: 'Preencha seu email',
     },
     {
       rule: 'email',
-      errorMessage: 'Email is invalid!',
+      errorMessage: 'Email inválido: coloque no formato "nome@email.com"',
     },
     {
       rule: 'minLength',
       value: 10,
-      errorMessage: 'Email is too short!',
+      errorMessage: 'Email inválido: abaixo de 10 caracteres',
     },
     {
       rule: 'maxLength',
       value: 50,
-      errorMessage: 'Email is too long!',
+      errorMessage: 'Email inválido: acima de 50 caracteres',
     },
   ])
   .addField('#textarea-id', [
     {
       rule: 'maxLength',
       value: 500,
-      errorMessage: 'Use up to 500 characters',
+      errorMessage: 'Use no máximo 500 caracteres',
     },
   ])
   .addRequiredGroup('#communication_radio_group')
-  .onSuccess((event) => {
-    console.log('Validation passes and form submitted', event);
-  });
+  .addField('#data-ida-id', [
+    {
+      rule: 'required',
+      errorMessage: 'Preencha a sua data de ida',
+    },
+  ])
+  .addField('#data-ida-id', [
+    {
+      rule: 'required',
+      errorMessage: 'Preencha a sua data de volta',
+    },
+  ])

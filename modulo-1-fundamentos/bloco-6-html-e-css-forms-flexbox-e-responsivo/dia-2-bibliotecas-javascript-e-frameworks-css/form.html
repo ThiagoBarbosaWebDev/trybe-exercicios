@@ -34,6 +34,7 @@
             name="nome-name"
             id="nome-id"
             class="form-control"
+            placeholder="Prencha seu nome"
           />
         </div>
         <div class="form-group">
@@ -43,26 +44,13 @@
             name="email-name"
             id="email-id"
             class="form-control"
+            placeholder="Preencha seu email"
           />
         </div>
 
         <fieldset class="form-group">
           <legend class="col-form-label">Destino</legend>
-          <div class="row">
-            <div class="col-sm-10">
-              <div class="form-check">
-                <input
-                  type="radio"
-                  name="radio"
-                  id="communication_radio_group"
-                  class="form-check-input"
-                />
-                <label for="communication_radio_group" class="form-check-label"
-                  >Cidade</label
-                >
-              </div>
-            </div>
-
+          <div class="row" id="communication_radio_group">
             <div class="col-sm-10">
               <div class="form-check">
                 <input
@@ -72,7 +60,7 @@
                   class="form-check-input"
                 />
                 <label for="communication_radio_group1" class="form-check-label"
-                  >Campo</label
+                  >Cidade</label
                 >
               </div>
             </div>
@@ -86,7 +74,7 @@
                   class="form-check-input"
                 />
                 <label for="communication_radio_group2" class="form-check-label"
-                  >Praia</label
+                  >Campo</label
                 >
               </div>
             </div>
@@ -100,6 +88,20 @@
                   class="form-check-input"
                 />
                 <label for="communication_radio_group3" class="form-check-label"
+                  >Praia</label
+                >
+              </div>
+            </div>
+
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input
+                  type="radio"
+                  name="radio"
+                  id="communication_radio_group4"
+                  class="form-check-input"
+                />
+                <label for="communication_radio_group4" class="form-check-label"
                   >Montanhas</label
                 >
               </div>
@@ -109,34 +111,36 @@
 
         <div class="form-group">
           <label for="textarea-id">
-            Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+            Em até 500 caracteres, por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
             TrybeTrip?
           </label>
           <textarea
             name="textarea-name"
             id="textarea-id"
             class="form-control"
+            placeholder="Escreva aqui."
           ></textarea>
         </div>
 
-        <div class="form-group">
-          <label for="date-id" class="real"> Dia de Ida </label>
-          <input
-            type="date"
-            name="date-name"
-            id="date-id"
-            class="form-control"
-          />
-        </div>
-
-        <div class="form-group">
-          <label for="date-id" class="real"> Dia de Retorno </label>
-          <input
-            type="date"
-            name="date-name"
-            id="date-id"
-            class="form-control"
-          />
+        <div class="date-container">
+          <div class="form-group">
+            <label for="date-ida-id" class="real"> Dia de Ida </label>
+            <input
+              type="date"
+              name="date-name"
+              id="date-ida-id"
+              class="form-control"
+            />
+          </div>
+          <div class="form-group">
+            <label for="date-volta-id" class="real"> Dia de Retorno </label>
+            <input
+              type="date"
+              name="date-name"
+              id="date-volta-id"
+              class="form-control"
+            />
+          </div>
         </div>
 
         <div class="form-group">
@@ -177,7 +181,7 @@
           />
         </div>
 
-        <div class="form-group">
+        <div class="form-group btn-container">
           <button
             type="submit"
             id="submit-button"
