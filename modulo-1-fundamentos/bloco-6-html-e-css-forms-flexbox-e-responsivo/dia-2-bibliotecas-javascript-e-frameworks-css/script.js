@@ -72,7 +72,7 @@ const validation = new JustValidate(
     focusInvalidField: true,
     lockForm: true,
     tooltip: {
-      position: 'right',
+      position: 'top',
     },
     errorContainer: '.errors-container',
   },
