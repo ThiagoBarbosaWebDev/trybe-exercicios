@@ -103,9 +103,9 @@ function showSextou() {
   let getFridayButton = document.querySelector("#btn-friday");
   let getFridays = document.querySelectorAll(".friday");
   let sextouText = "#SEXTOU";
-  let fridays = [4,11,18,25]
+  let fridays = [4, 11, 18, 25];
 
-    getFridayButton.addEventListener("click", function () {
+  getFridayButton.addEventListener("click", function () {
     for (let index = 0; index < getFridays.length; index += 1) {
       let sextaNum = getFridays[index];
 
@@ -124,9 +124,8 @@ showSextou();
 function zoomInDays() {
   let days = document.querySelector("#days");
 
-  days.addEventListener("mouseover", function (event) {
-    event.target.style.fontSize = "25px";
-    event.target.style.fontWeight = "700";
+  days.addEventListener("mouseover", function (e) {
+    if (e.target.tagName = 'LI') {e.target.style.fontWeight = "900";}
   });
 }
 
@@ -135,43 +134,24 @@ zoomInDays();
 function zoomOutDays() {
   let days = document.querySelector("#days");
 
-  days.addEventListener("mouseout", function (event) {
-    event.target.style.fontSize = "1em";
-    event.target.style.fontWeight = "500";
+  days.addEventListener("mouseout", function (e) {
+    if (e.target.tagName = 'LI') {e.target.style.fontWeight = "500";}
   });
 }
 
+
 zoomOutDays();
 
-// Exercicio 7
-function addTask(tarefa) {
-  let myTasks = document.querySelector(".my-tasks");
-  newSpan = document.createElement("span");
-  newSpan.innerHTML = tarefa;
-  myTasks.appendChild(newSpan);
-}
+const tasksContainer = document.querySelector("#my-tasks-container");
+const addTaskButton = document.querySelector("#btn-add");
 
-addTask("cozinhar");
-
-// Exercicio 8
-
-function addLegenda(cor) {
-  let legenda = document.querySelector(".my-tasks");
-  newDiv = document.createElement("div");
-  newDiv.style.backgroundColor = cor;
-  newDiv.className = "task";
-  legenda.appendChild(newDiv);
-}
-
-addLegenda("red");
-
-// Exercicio 9
-
-function taskSelector() {
-  let taskDiv = document.querySelector(".task");
-
-  taskDiv.addEventListener("click", (e) => {
-    if (taskDiv.className === "task") {
+function taskSelector(targetDiv) {
+  targetDiv.addEventListener("click", (e) => {
+    const listaTasks = Array.from(tasksContainer.children).slice(1);
+    listaTasks.forEach((element) => {
+      element.firstChild.className = "task";
+    });
+    if (targetDiv.className === "task") {
       e.target.className = "task selected";
     } else {
       e.target.className = "task";
@@ -179,67 +159,52 @@ function taskSelector() {
   });
 }
 
-taskSelector();
+function rgbGenerator() {
+  let r = Math.floor((Math.random() * 255) + 1 );
+  let g = Math.floor((Math.random() * 255) + 1 );
+  let b = Math.floor((Math.random() * 255) + 1 );
 
-
-// Exercicio 10
-let taskDiv = document.querySelector(".task")
-console.log(taskDiv)
-
-console.log(taskDiv.style.backgroundColor)
-
-let taskColor = taskDiv.style.backgroundColor
-console.log(taskColor)
-
-
-function calendarTaskPainter() {
-  dia = document.querySelector("#days")
-  let taskDiv = document.querySelector(".task")
-  let defaultColor = "rgb(119,119,119)"
-  taskColor = taskDiv.style.backgroundColor
-  console.log(taskColor)
-
-  dia.addEventListener('click', e => {
-    let targetColor = e.target.style.color
-    console.log(targetColor)
-    console.log(taskColor)
-    // if (targetColor === defaultColor) {let color = taskColor; targetColor = color}
-    // else {e.target.style.backgroundcolor = defaultColor}
-
-
-    let eventTargetColor = e.target.style.color;
-    let selectedTask = document.getElementsByClassName('task selected');
-
-    if (selectedTask.length > 0) {
-      let color = selectedTask[0].style.backgroundColor;
-      e.target.style.color = color;
-    } else if (eventTargetColor === taskColor) {
-      e.target.style.color = 'rgb(119,119,119)';
-    }
-
-
-
-
-  })
+  return `rgb(${r}, ${g}, ${b})`
 }
 
-calendarTaskPainter()
+function addLegenda(target) {
+  const newDiv = document.createElement("div");
+  newDiv.style.backgroundColor = rgbGenerator()
+  newDiv.className = "task";
+  taskSelector(newDiv);
+  target.appendChild(newDiv);
+}
 
-// function setDayColor() {
-//   let selectedTask = document.getElementsByClassName('task selected');
-//   let days = document.querySelector('#days');
-//   let taskDiv = document.querySelector('.task');
-//   let taskColor = taskDiv.style.backgroundColor;
-  
-//   days.addEventListener('click', function(event){
-//     let eventTargetColor = event.target.style.color;
-//     if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
-//       let color = selectedTask[0].style.backgroundColor;
-//       event.target.style.color = color;
-//     } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
-//       event.target.style.color = 'rgb(119,119,119)';
-//     }
-//   });
-// };
+function addTask(target) {
+  const taskInput = document.querySelector("#task-input");
+  newSpan = document.createElement("span");
+  newSpan.innerText = taskInput.value;
+  target.appendChild(newSpan);
+}
 
-// setDayColor();
+addTaskButton.addEventListener("click", () => {
+const newContainer = document.createElement('div')
+newContainer.className = 'task-wrapper'
+
+  addLegenda(newContainer);
+  addTask(newContainer)
+  tasksContainer.appendChild(newContainer)
+});
+
+function taskPainter() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('click', (e) => {
+    let selectedTask = document.querySelector('.selected');
+    if (e.target.tagName === 'LI') {
+      if (e.target.backgroundColor !== selectedTask) {
+        e.target.style.backgroundColor = selectedTask.style.backgroundColor
+        console.log(e.target)
+        console.log(e.target.style.backgroundColor)
+        console.log(selectedTask.style.backgroundColor)
+      } else {return}
+    }
+  });
+};
+
+taskPainter();
