@@ -1,10 +1,3 @@
-const fatorial = (n) => {
-  let m = n - 1;
-  while (m > 0) {
-    n *= m;
-    m -= 1;
-  }
-  return n;
-};
+const fatorial = n => n > 0 ? n * (fatorial(n-1)) : 1;
 
-console.log(fatorial(6));
+console.log(fatorial(5))
