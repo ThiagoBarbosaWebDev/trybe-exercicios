@@ -27,6 +27,9 @@ addNewProperty(lesson2, 'turno', 'noite')
 const showObjKeys = obj => Object.keys(obj)
 console.log(showObjKeys(lesson1))
 
+const showObjSize = obj => Object.keys(obj).length
+console.log(showObjSize(lesson1))
+
 
 // Crie uma função para adicionar o turno da noite na lesson2. Essa função deve possuir três parâmetros, 
 // sendo eles: o objeto a ser modificado, a chave que deverá ser adicionada e o valor dela.
