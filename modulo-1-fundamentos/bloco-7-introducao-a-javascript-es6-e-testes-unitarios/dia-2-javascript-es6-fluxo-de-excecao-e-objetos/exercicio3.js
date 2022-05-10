@@ -52,3 +52,16 @@ const getValueByNumber = (obj, index) => {
 }
 
 getValueByNumber(lesson1, 0)
+
+const verifyPair = (obj, chave, valor) => {
+  let array = [chave, valor];
+  let objArray = Object.entries(obj);
+  let isEqual = false
+  objArray.forEach(subarray => {
+    if (subarray[0] === array[0] && subarray[1] === array[1]) {isEqual = true}
+  });
+  return isEqual
+}
+
+console.log(verifyPair(lesson1, 'materia', 'Matemática'))
+
