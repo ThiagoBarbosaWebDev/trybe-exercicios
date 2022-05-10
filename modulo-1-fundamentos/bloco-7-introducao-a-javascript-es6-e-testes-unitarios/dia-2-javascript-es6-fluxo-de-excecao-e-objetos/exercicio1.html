@@ -22,11 +22,11 @@
         });
       };
 
-      const errorHandler = (value1, value2) => {
+      const exceptionHandler = (value1, value2) => {
         if (value1 === "" || value2 === "") {
           throw new Error("Preencha os dois campos");
         }
-        if (isNaN(value1 || value2)) {
+        if (isNaN(value1) || isNaN(value2)) {
           throw new Error("Preencha apenas com números");
         }
       };
@@ -40,7 +40,7 @@
         const value2 = document.getElementById("value2").value;
         const result = parseInt(value1) + parseInt(value2);
         try {
-          errorHandler(value1, value2);
+          exceptionHandler(value1, value2);
           sucessHandler(result);
         } catch (error) {
           document.getElementById("result").innerHTML = error.message;

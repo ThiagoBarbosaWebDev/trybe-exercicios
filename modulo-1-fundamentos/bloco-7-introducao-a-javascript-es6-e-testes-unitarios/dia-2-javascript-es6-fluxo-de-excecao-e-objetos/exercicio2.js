@@ -54,8 +54,8 @@ const orderModifier = (order) => {
   const cliente = order.buyer = 'Luiz Silva'
   const pizza = Object.keys(order.order.pizza)
   const bebida = order.order.drinks.coke.type
-  const newSum = order.payment.total = '50,00'
-  console.log (`Olá ${cliente}, o total do seu pedido de ${pizza[0]}, ${pizza[1]} e ${bebida} é de R$ ${newSum}`)  
+  const newSum = order.payment.total = '50'
+  console.log (`Olá ${cliente}, o total do seu pedido de ${pizza[0]}, ${pizza[1]} e ${bebida} é de ${new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(newSum)}`)  
 };
 
 orderModifier(order);

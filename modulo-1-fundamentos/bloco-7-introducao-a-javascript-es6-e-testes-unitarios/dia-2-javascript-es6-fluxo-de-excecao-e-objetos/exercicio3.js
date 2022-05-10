@@ -37,11 +37,17 @@ const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
 
 const totalEstudantes = (obj) => {
   let sum = 0;
-  for (i = 0; i < Object.keys(obj).length; i += 1) {
-    sum += obj[`lesson${i + 1}`].numeroEstudantes;
-  }
-  return sum;
-};
+  Object.entries(obj).forEach( element => {
+    sum += element[1].numeroEstudantes 
+  })
+  // Primeira tentativa com for loop:
+  // for (i = 0; i < Object.keys(obj).length; i += 1) {
+  //   sum += obj[`lesson${i + 1}`].numeroEstudantes;
+  // }
+  return sum;  
+}
+
+
 
 console.log(totalEstudantes(allLessons));
 
