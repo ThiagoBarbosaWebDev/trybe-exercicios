@@ -66,14 +66,37 @@ const verifyPair = (obj, chave, valor) => {
 
 console.log(verifyPair(lesson1, "materia", "Matemática"));
 
-const mathStudentTally = (obj, target) => {
+const studentTally = (obj, key, value) => {
   let tally = 0;
   for (let element of Object.entries(obj)) {
-    if (element[1].materia === target) {
+    if (element[1][key] === value) {
       tally += element[1].numeroEstudantes;
     }
   }
-  console.log(tally);
+  return tally;
 };
 
-mathStudentTally(allLessons, "Matemática");
+console.log(studentTally(allLessons, 'materia', "Matemática"));
+
+console.log(studentTally(allLessons, 'professor', 'Maria Clara'));
+
+const aulasMinistradas = (obj, value) => {
+  arrayAulas = [];
+  for (let element of Object.entries(obj)) {
+    if (element[1]['professor'] === value) {
+      arrayAulas.push(element[1].materia);
+    }
+}
+return arrayAulas
+}
+
+function relatorioProfessor(professor) {
+  this.professor = professor;
+  this.aulas = aulasMinistradas(allLessons, professor)
+  this.totalEstudantes = studentTally(allLessons, 'professor', professor); 
+}
+
+const novoRelatorio = (professor) => new relatorioProfessor(professor);
+
+console.log(novoRelatorio('Maria Clara'))
+console.log(novoRelatorio('Carlos'))
