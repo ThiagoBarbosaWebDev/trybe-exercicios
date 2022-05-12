@@ -47,19 +47,18 @@ const searchEmployee = (id, detail) => {
 
   professionalBoard.forEach((element) => {
     if (element.id === identificador) {
-      check = true; 
+      check = true;
     }
   });
-
+  if (!check) {
+    throw new Error("ID não identificada");
+  }
   try {
-    console.log(check)
-    console.log(!check)
-    if (!check) {console.log('entrei no if'); throw new Error('ID não identificada')}
-  return professionalBoard.find(({ id }) => id === identificador)[detail];
-  } 
-  catch(error) { error.message ; console.log(error.message)}
+    return professionalBoard.find(({ id }) => id === identificador)[detail];
+  } catch (error) {
+    error.message;
+    throw error;
+  }
 };
-
-console.log(searchEmployee("4678-22", "specialities"));
 
 module.exports = searchEmployee;
