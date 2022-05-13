@@ -21,4 +21,4 @@
 .ionide
 
 # Support for Project snippet scope
-
+node_modules/
