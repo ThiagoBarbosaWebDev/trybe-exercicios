@@ -9,7 +9,7 @@ window.onload = function () {
   submitButton.disabled = !agreement.checked;
   });
 };
-
+const submitButton = document.querySelector("#submit-button");
 function clearForm() {
   const formInputs = document.querySelectorAll("input");
   const textArea = document.querySelector("textarea");
@@ -21,31 +21,29 @@ function clearForm() {
   textArea.value = "";
 }
 
-function validationHandler() {
-  const nomeCompleto = document.querySelector("#nome-id").value.length;
-  const nomeInvalido = nomeCompleto < 10 || nomeCompleto > 40;
 
-  const email = document.querySelector("#email-id").value.length;
-  const emailInvalido = email < 10 || email > 50;
+const inputNome = document.querySelector("#nome-id");
+const inputEmail = document.querySelector("#email-id");
+const inputTextarea = document.querySelector("#textarea-id");
+const inputDate = document.querySelector("#date-id");
 
-  const textArea = document.querySelector("textarea").value.length;
-  const textAreaInvalida = textArea > 500;
-
-  if (emailInvalido || nomeInvalido || textAreaInvalida) {
-    return false;
-  } else {
-    return true;
-  }
-}
-
-function submitHandler(e) {
-  e.preventDefault();
-  const validation = validationHandler();
-  if (validation === false) {
-    alert("Dados inválidos");
-  } else {
+const validateForms = () => {
+  const inputDestino = document.querySelector('input[name="destino"]:checked');
+  if (inputNome.value.length < 10 || inputNome.value.length > 40) {
+    alert("Dados Inválidos");
+  } else if (inputEmail.value.length < 10 || inputEmail.value.length > 50) {
+    alert("Dados Inválidos");
+  } else if (!inputDestino || !inputDate) {
+    alert("Dados Inválidos");
+  } else if (inputTextarea.value.length > 500) {
+    alert("Dados Inválidos");
+  } else
     alert(
       "Dados enviados com sucesso! Obrigado por participar do concurso TrybeTrip."
     );
-  }
-}
+};
+
+submitButton.addEventListener("click", (evt) => {
+  evt.preventDefault();
+  validateForms()
+});
