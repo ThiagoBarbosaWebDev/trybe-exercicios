@@ -43,7 +43,9 @@ const validateForms = () => {
     );
 };
 
+const submitHandler = () => {
 submitButton.addEventListener("click", (evt) => {
   evt.preventDefault();
   validateForms()
 });
+}
