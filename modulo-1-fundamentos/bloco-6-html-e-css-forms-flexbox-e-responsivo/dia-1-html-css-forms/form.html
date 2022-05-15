@@ -8,8 +8,7 @@
   </head>
   <body>
     <form action="" method="get" id="form-id">
-      <label for="nome-id"
-        >Nome Completo:
+      <label for="nome-id">Nome Completo:</label>
         <input
           type="text"
           name="nome-name"
@@ -17,10 +16,9 @@
           minlength="10ch"
           maxlength="40ch"
         />
-      </label>
+
       <br />
-      <label for="email-id"
-        >E-mail:
+      <label for="email-id">E-mail:</label>
         <input
           type="email"
           name="email-name"
@@ -28,67 +26,63 @@
           minlength="10ch"
           maxlength="50ch"
         />
-      </label>
-      <br />
 
-      <label for="radio-opt-cidade">
-        <input type="radio" name="radio" id="radio-opt-cidade" />
-        Cidade</label
-      >
+      <section>
+        <label for="radio-opt-cidade">Cidade</label>
+        <input type="radio" name="destino" id="radio-opt-cidade" />
+        
+        <label for="radio-opt-campo">Campo</label>
+        <input type="radio" name="destino" id="radio-opt-campo" />
+        
+        <label for="radio-opt-praias">Praia</label>
+        <input type="radio" name="destino" id="radio-opt-praias" />
 
-      <label for="radio-opt-campo">
-        <input type="radio" name="radio" id="radio-opt-campo" />
-        Campo</label
-      >
+        <label for="radio-opt-montanhas">Montanhas</label>
+        <input type="radio" name="destino" id="radio-opt-montanhas" />
+      </section>
 
-      <label for="radio-opt-praias">
-        <input type="radio" name="radio" id="radio-opt-praias" />
-        Praia</label
-      >
+      <section>
+        <label for="textarea-id"> Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
+          TrybeTrip? </label>
+          <br />
+          <textarea
+            name="textarea-name"
+            id="textarea-id"
+            cols="30"
+            rows="10"
+            maxlength="500ch"
+          ></textarea>
+      </section>
 
-      <label for="radio-opt-montanhas">
-        <input type="radio" name="radio" id="radio-opt-montanhas" />
-        Montanhas</label
-      >
-      <br />
-      <label for="textarea-id">
-        Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso
-        TrybeTrip?
-        <br />
-        <textarea
-          name="textarea-name"
-          id="textarea-id"
-          cols="30"
-          rows="10"
-          maxlength="500ch"
-        ></textarea>
-      </label>
-      <br />
-      <label for="date-id"
-        >Qual a melhor data para realizar sua viagem?
-        <br />
+      <section>
+        <label for="date-id">Qual a melhor data para realizar sua viagem? </label>
         <input type="date" name="date-name" id="date-id" />
-      </label>
-      <br />
-      <label for="checkbox-id">
+      </section>
+
+
+      <section>
         <input type="checkbox" name="checkbox-name" id="checkbox-id" />
-        Gostaria de receber outras incríveis oportunidades oferecidas pela
-        Trybe?</label
-      >
-      <br />
-      <label for="agreement-checkbox">
+        <label for="checkbox-id">Gostaria de receber outras incríveis oportunidades oferecidas pela
+        Trybe?</label>
+      </section>
+
+
+      <section>
         <input type="checkbox" name="checkbox-name2" id="agreement-checkbox" />
-        Concordo que imagens das minhas férias poderão ser usadas na divulgação
-        de concursos futuros.</label
-      >
-      <br />
-      <label for="">
+        <label for="agreement-checkbox">Concordo que imagens das minhas férias poderão ser usadas na divulgação
+          de concursos futuros.</label>
+      </section>
+
+
+      <section>
         <input type="file" name="" id="" accept=".png,.jpg" />
-        Nos envie sua foto</label
-      >
-      <br />
-      <button type="submit" id="submit-button" disabled>SUBMIT</button>
-      <button type="button" id ="clear">RESET</button>
+        <label for="">Nos envie sua foto</label>
+      </section>
+
+      <section>
+        <button type="submit" id="submit-button" disabled>SUBMIT</button>
+        <button type="button" id ="clear">RESET</button>
+      </section>
     </form>
     <script src="script.js"></script>
   </body>
