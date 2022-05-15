@@ -2,13 +2,11 @@ window.onload = function () {
   const clearButton = document.querySelector("#clear");
   clearButton.addEventListener("click", clearForm);
   const button = document.querySelector("#submit-button");
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
-  });
+  button.addEventListener("click", submitHandler);
   const agreement = document.querySelector("#agreement-checkbox");
   agreement.addEventListener("change", function () {
-    const submitButton = document.querySelector("#submit-button");
-    submitButton.disabled = !agreement.checked;
+  const submitButton = document.querySelector("#submit-button");
+  submitButton.disabled = !agreement.checked;
   });
 };
 const submitButton = document.querySelector("#submit-button");
@@ -22,6 +20,7 @@ function clearForm() {
   }
   textArea.value = "";
 }
+
 
 const inputNome = document.querySelector("#nome-id");
 const inputEmail = document.querySelector("#email-id");
