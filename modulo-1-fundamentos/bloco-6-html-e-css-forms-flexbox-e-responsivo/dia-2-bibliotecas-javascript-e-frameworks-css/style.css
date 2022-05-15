@@ -9,6 +9,7 @@ form {
   border-right: 5px solid black;
   border-left: 1px solid black;
   background-color: rgb(240, 239, 239);
+  height: 100vh;
 }
 
 #legend-main {
