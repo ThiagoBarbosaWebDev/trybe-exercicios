@@ -60,11 +60,11 @@ const books = [
     releaseYear: 1928,
   },
 ];
-
+// 🚀 6 - Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
 // Adicione o código do exercício aqui:
-function fantasyOrScienceFictionAuthors() {
+function oldBooks() {
   // escreva seu código aqui
-  return books.filter(book => book.genre === 'Ficção Científica' || book.genre === 'Fantasia').map(book => book.author.name).sort()
+  return books.filter(book => 2022 - book.releaseYear >= 60 ).map(book => book.name)
 }
 
-console.log(fantasyOrScienceFictionAuthors())
+console.log(oldBooks())
