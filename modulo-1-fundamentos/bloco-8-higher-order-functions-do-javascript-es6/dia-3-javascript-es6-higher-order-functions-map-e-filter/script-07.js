@@ -61,21 +61,26 @@ const books = [
   },
 ];
 
-const dotCounter = (authorList) => {
-  let counter = 0;
-  for (let author of authorList) {
-    for (let char of author) {
-      if (char === '.') {counter += 1}
-    }
-    if (counter === 3) {return author}
-    counter = 0;
-  }
-}
+// Primeira tentativa de solução:
+// const dotCounter = (authorList) => {
+//   let counter = 0;
+//   for (let author of authorList) {
+//     for (let char of author) {
+//       if (char === '.') {counter += 1}
+//     }
+//     if (counter === 3) {return author}
+//     counter = 0;
+//   }
+// }
+
+// function authorWith3DotsOnName() {
+// escreva seu código aqui
+// let authors = books.map(book => book.author.name) 
+// return books.find(book => book.author.name === dotCounter(authors)).name
+// }
 
 function authorWith3DotsOnName() {
-  // escreva seu código aqui
-  let authors = books.map(book => book.author.name) 
-  return books.find(book => book.author.name === dotCounter(authors)).name
+// escreva seu código aqui
+return books[books.filter(book => book.author.name.match(/[.]/g)).map((book) => book.author.name.match(/[.]/g).length).indexOf(3)].name
 }
-
 console.log(authorWith3DotsOnName())
