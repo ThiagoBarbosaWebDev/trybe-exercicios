@@ -61,9 +61,10 @@ const books = [
   },
 ];
 
-function nameAndAge() {
+// Adicione o código do exercício aqui:
+function fantasyOrScienceFiction() {
   // escreva seu código aqui
-  return books.map(book => ({author: book.author.name, age: book.releaseYear - book.author.birthYear})).sort((a, b) => a.age - b.age)
+  return books.filter(book => book.genre === 'Ficção Científica' || book.genre === 'Fantasia')
 }
 
-console.table(nameAndAge())
+console.table(fantasyOrScienceFiction())
