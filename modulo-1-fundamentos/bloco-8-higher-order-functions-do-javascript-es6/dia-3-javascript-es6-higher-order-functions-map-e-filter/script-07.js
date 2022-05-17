@@ -78,7 +78,7 @@ const dotCounter = (authorList) => {
 function authorWith3DotsOnName() {
   // escreva seu código aqui
   let authors = books.map(book => book.author.name) 
-  return dotCounter(authors)
+  return books.find(book => book.author.name === dotCounter(authors)).name
 }
 
 console.log(authorWith3DotsOnName())
