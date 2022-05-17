@@ -61,9 +61,6 @@ const books = [
   },
 ];
 
-// const expectedResult = 'O Senhor dos Anéis';
-// 🚀 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
-// Dica: cada inicial termina com um ponto.
 const dotCounter = (authorList) => {
   let counter = 0;
   for (let author of authorList) {
