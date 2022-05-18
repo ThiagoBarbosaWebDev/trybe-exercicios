@@ -4,10 +4,8 @@ const names = [
   'Abeladerco', 'Adieidy', 'Alarucha',
 ];
 
-
 function containsA() {
   // escreva seu código aqui
-  let array = [];
   return names.reduce((acc, str) => acc + str.match(/a/gi).length, 0)
 }
 
