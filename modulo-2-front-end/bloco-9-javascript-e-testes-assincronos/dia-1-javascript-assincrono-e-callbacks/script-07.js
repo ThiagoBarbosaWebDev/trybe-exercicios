@@ -4,4 +4,4 @@ const uppercase = (str, callback) => {
   }, 500);
 };
 
-module.exports = {uppercase}
+module.exports = uppercase
