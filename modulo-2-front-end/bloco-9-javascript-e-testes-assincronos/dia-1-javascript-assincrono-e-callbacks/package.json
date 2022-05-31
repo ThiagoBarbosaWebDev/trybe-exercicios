@@ -1,0 +1,31 @@
+{
+  "devDependencies": {
+    "@types/jest": "^27.5.1",
+    "jest": "^28.1.0"
+  },
+  "name": "dia-1-javascript-assincrono-e-callbacks",
+  "version": "1.0.0",
+  "main": "script-01.js",
+  "dependencies": {
+    "ansi-regex": "^5.0.1",
+    "ansi-styles": "^4.3.0",
+    "chalk": "^4.1.2",
+    "color-convert": "^2.0.1",
+    "color-name": "^1.1.4",
+    "diff-sequences": "^27.5.1",
+    "has-flag": "^4.0.0",
+    "jest-diff": "^27.5.1",
+    "jest-get-type": "^27.5.1",
+    "jest-matcher-utils": "^27.5.1",
+    "pretty-format": "^27.5.1",
+    "react-is": "^17.0.2",
+    "supports-color": "^7.2.0"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
