@@ -1,16 +1,17 @@
 import React from 'react';
 
-// const compromissos = ['Acordar', 'Codar', 'Dormir'];
+const compromissos = ['Acordar', 'Codar', 'Dormir'];
 
 const Task = (value) => {
   return (
-    <li>{value}</li>
+    <li key={value}>{value}</li>
   );
 }
 
 class App extends React.Component {
   render() {
-    return Task(12);
+    const taskList = compromissos.map(Task)
+    return <ul>{taskList}</ul>
   }
 }
  
