@@ -1,5 +1,4 @@
-##  Exercício 2:
-> A partir do comando `npx create-react-app nome-app` crie a pasta `exercise-02` e realize os seguintes **requisito**s:
+##  Exercício 01:
 
 **Requisito 1** - Crie uma lista de tarefas simples seguindo os passos abaixo:
 

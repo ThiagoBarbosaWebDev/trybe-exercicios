@@ -1,5 +1,4 @@
-##  Exercício:
-> A partir do comando `npx create-react-app nome-app` crie a pasta `exercise-03` e realize os seguintes requisitos:
+##  Exercício 02:
 
 **Requisito 1** - Na pasta `src`, crie um novo arquivo chamado `Header.jsx`, que representará o componente Header. Neste arquivo, crie uma classe React, chamada `Header`. Essa classe deve renderizar uma tag `<h1>` com o texto `Conteúdos de Front-End`. 
 

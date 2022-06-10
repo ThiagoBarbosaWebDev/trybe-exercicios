@@ -1,0 +1,1 @@
+## Readmes individuais nas pastas de exercício.
