@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+##  Exercício:
+> A partir do comando `npx create-react-app nome-app` crie a pasta `exercise-03` e realize os seguintes requisitos:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Requisito 1** - Na pasta `src`, crie um novo arquivo chamado `Header.jsx`, que representará o componente Header. Neste arquivo, crie uma classe React, chamada `Header`. Essa classe deve renderizar uma tag `<h1>` com o texto `Conteúdos de Front-End`. 
 
-## Available Scripts
+* Não esqueça de exportar esse componente.
 
-In the project directory, you can run:
+* No arquivo `App.js`, importe o componente `Header` criado anteriormente.
 
-### `npm start`
+* Renderize o componente `Header` no `App.js`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Requisito 2** - Na pasta `src`, crie um novo arquivo chamado `Content.jsx`, que representará o componente Content. Dentro do arquivo `Content.jsx`, crie uma classe React chamada `Content`. Ainda no arquivo `Content.jsx`, adicione o seguinte array:
 
-### `npm test`
+```
+const conteudos = [
+  {
+    conteudo: 'High Order Functions',
+    bloco: 8,
+    status: 'Aprendido'
+  },
+  {
+    conteudo: 'Composicao de Componentes',
+    bloco: 11,
+    status: 'Aprendendo',
+  },
+  {
+    conteudo: 'Composicao de Estados',
+    bloco: 12,
+    status: 'Aprenderei'
+  },
+  {
+    conteudo: 'Redux',
+    bloco: 16,
+    status: 'Aprenderei'
+  },
+];
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* A classe Content deve renderizar o array `conteudos` com a utilização da função `map`, como visto anteriormente, com o seguinte formato:
 
-### `npm run build`
+```
+O conteúdo é: `Nome do Conteúdo`
+Status: `Status do Conteúdo`
+Bloco: `Bloco do Conteúdo`
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Lembre-se de adicionar o atributo `key` ao elemento pai dessa lista, na renderização.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Exporte o componente `Content`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* No arquivo `App.js`, importe o componente `Content` criado anteriormente.
 
-### `npm run eject`
+* Renderize o componente `Content` no `App.js`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Requisito 3** - Crie um novo arquivo `Footer.jsx`. Neste arquivo, crie uma classe chamada Footer. A classe Footer deve renderizar uma tag `<h1>` com o texto `E isso é só o começo…`. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Não esqueça de exportar o componente criado.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Importe e renderize o componente `Footer` no `App.js`.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Requisito 4** - (**Bônus**) Estilize a página criada. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Para isso, adicione classes para estilização dos seus componentes de forma que cada conteúdo listado seja um Card.
 
-### Code Splitting
+* Para adicionar uma classe de estilização em um elemento HTML, utilize o atributo className:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+<footer className='footer'>
+  ...
+</footer>
+```
