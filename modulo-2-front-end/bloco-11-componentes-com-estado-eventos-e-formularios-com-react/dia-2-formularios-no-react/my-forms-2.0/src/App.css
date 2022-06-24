@@ -12,6 +12,10 @@ form {
   gap: 50px
 }
 
+fieldset {
+  border-radius: 8px;
+}
+
 .data-container-wrapper {
   display: flex;
   justify-content: center;
@@ -45,11 +49,12 @@ select {
 
 label {
   font-weight: 500;
-
 }
 
 input {
-  padding: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 button {

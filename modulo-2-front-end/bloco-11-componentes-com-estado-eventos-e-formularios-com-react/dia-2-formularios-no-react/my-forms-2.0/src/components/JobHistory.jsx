@@ -4,22 +4,23 @@ import TextArea from './TextArea';
 
 class JobHistory extends React.Component {
   render() {
+    const { onChange, state } = this.props
     return (
       <fieldset className='form-job-history'>
         <legend>Job history</legend>
         <TextArea 
           labelText='Resumo do currículo: '
-          inputName='cvResume'
-          {...{ required: true, rows: 5,} }
+          inputName='cv'
+          {...{ required: true, rows: 5, onChange} }
         />
         <TextArea 
           labelText='Cargo: '
-          inputName='cargo'
-          {...{ required: true , rows: 5,} }
+          inputName='job'
+          {...{ required: true , rows: 5, onChange} }
         />
         <Input
           labelText='Descrição do cargo: '
-          {...{ required: true }}
+          {...{ required: true, onChange, inputName: 'jobDescription' }}
         />
       </fieldset>
     )

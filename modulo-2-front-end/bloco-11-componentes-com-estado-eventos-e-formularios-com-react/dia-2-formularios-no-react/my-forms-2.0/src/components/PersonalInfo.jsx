@@ -4,6 +4,8 @@ import ComboBox from "./ComboBox";
 
 class PersonalInfo extends React.Component {
   render() {
+    const { onChange, state } = this.props
+
     const estados = [
       "AC", "AL", "AP", "AM", "BA", "CE", "DF", "ES",
       "GO", "MA", "MT", "MS", "MG", "PA", "PB", "PR",
@@ -18,6 +20,8 @@ class PersonalInfo extends React.Component {
       inputName:'nome', 
       // otherProps
       required: 'required', 
+      onChange,
+      state
     }
 
     const emailProps = {
@@ -28,16 +32,20 @@ class PersonalInfo extends React.Component {
       inputName:'email', 
       // otherProps
       required: 'required', 
+      onChange,
+      state
     }
 
     const cpfProps = {
       labelText:'CPF: ', 
       inputId:'form-cpf', 
       inputType:'text', 
-      placeHolder:'CPF 000.000.000-00', 
+      placeHolder:'000.000.000-00', 
       inputName:'cpf', 
       // otherProps
       required: 'required', 
+      onChange,
+      state
     }
 
     const enderecoProps = {
@@ -45,9 +53,11 @@ class PersonalInfo extends React.Component {
       inputId:'form-address', 
       inputType:'text', 
       placeHolder:'Endereço', 
-      inputName:'endereco', 
+      inputName:'address', 
       // otherProps
       required: 'required', 
+      onChange,
+      state
     }
 
     const cidadeProps = {
@@ -58,24 +68,30 @@ class PersonalInfo extends React.Component {
       inputName:'cidade', 
       // otherProps
       required: 'required', 
+      onChange,
+      state
     }
 
     const radioResidenciaAptProps = {
       labelText:'Apartamento: ', 
-      inputId:'apt', 
+      inputId:'form-radio-apt', 
       inputType:'radio', 
-      inputName:'residencia', 
+      inputName:'residence', 
       // otherProps
       required: 'required', 
+      value: 'Apartamento',
+      onChange
     }
 
     const radioResidenciaCasaProps = {
       labelText:'Casa: ', 
-      inputId:'casa', 
+      inputId:'form-radio-casa', 
       inputType:'radio', 
-      inputName:'residencia', 
+      inputName:'residence', 
       // otherProps
       required: 'required', 
+      value: 'Casa',
+      onChange
     }
 
     return (
@@ -86,11 +102,11 @@ class PersonalInfo extends React.Component {
         <Input {...cpfProps}/>
         <Input {...enderecoProps}/>
         <Input {...cidadeProps}/>
-        <ComboBox data={estados}/>
+        <ComboBox data={estados} onChange={onChange}/>
         <fieldset className="residencia-wrapper">
           <legend> Residência </legend>
-          <Input {...radioResidenciaAptProps}/>
-          <Input {...radioResidenciaCasaProps}/>
+          <Input {...radioResidenciaAptProps} state={state}/>
+          <Input {...radioResidenciaCasaProps} state={state}/>
         </fieldset>
       </fieldset>
     )
