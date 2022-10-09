@@ -11,16 +11,16 @@ class JobHistory extends React.Component {
         <TextArea 
           labelText='Resumo do currículo: '
           inputName='cv'
-          {...{ required: true, rows: 5, onChange} }
+          {...{ required: true, rows: 5, onChange, state} }
         />
         <TextArea 
           labelText='Cargo: '
           inputName='job'
-          {...{ required: true , rows: 5, onChange} }
+          {...{ required: true , rows: 5, onChange, state} }
         />
         <Input
           labelText='Descrição do cargo: '
-          {...{ required: true, onChange, inputName: 'jobDescription' }}
+          {...{ required: true, onChange, inputName: 'jobdescription', state }}
         />
       </fieldset>
     )

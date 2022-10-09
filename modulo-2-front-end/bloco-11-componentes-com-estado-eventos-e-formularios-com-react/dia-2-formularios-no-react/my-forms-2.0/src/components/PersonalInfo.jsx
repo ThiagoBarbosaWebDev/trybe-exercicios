@@ -65,7 +65,7 @@ class PersonalInfo extends React.Component {
       inputId:'form-city', 
       inputType:'text', 
       placeHolder:'Cidade', 
-      inputName:'cidade', 
+      inputName:'city', 
       // otherProps
       required: 'required', 
       onChange,
@@ -102,11 +102,11 @@ class PersonalInfo extends React.Component {
         <Input {...cpfProps}/>
         <Input {...enderecoProps}/>
         <Input {...cidadeProps}/>
-        <ComboBox data={estados} onChange={onChange}/>
+        <ComboBox data={estados} onChange={onChange} {...state} />
         <fieldset className="residencia-wrapper">
           <legend> Residência </legend>
-          <Input {...radioResidenciaAptProps} state={state}/>
-          <Input {...radioResidenciaCasaProps} state={state}/>
+          <Input {...radioResidenciaAptProps} />
+          <Input {...radioResidenciaCasaProps} />
         </fieldset>
       </fieldset>
     )

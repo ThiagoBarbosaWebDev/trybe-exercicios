@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      nome: 'teste',
+      nome: '',
       email: '',
       cpf: '',
       address: '',
@@ -17,7 +17,7 @@ class App extends React.Component {
       residence: '',
       cv: '',
       job: '',
-      jobDescription: '',
+      jobdescription: '',
     }
   }
 

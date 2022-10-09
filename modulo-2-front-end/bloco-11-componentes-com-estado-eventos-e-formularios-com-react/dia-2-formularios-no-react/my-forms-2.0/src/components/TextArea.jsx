@@ -2,7 +2,9 @@ import React from 'react';
 
 class TextArea extends React.Component {
   render() {
-   const { labelText, inputId, inputType, placeHolder, inputName, ...otherProps } = this.props
+   const { labelText, inputId, inputType, placeHolder, inputName, state, ...otherProps } = this.props
+   const valueAttr = state ? state[inputName] : '';
+
    if (labelText) { 
     return (
       <div className='input-wrapper'>
@@ -12,6 +14,7 @@ class TextArea extends React.Component {
             type={inputType}
             placeholder={placeHolder}
             name={inputName}
+            value={valueAttr}
             {...otherProps}
           />
         </label>

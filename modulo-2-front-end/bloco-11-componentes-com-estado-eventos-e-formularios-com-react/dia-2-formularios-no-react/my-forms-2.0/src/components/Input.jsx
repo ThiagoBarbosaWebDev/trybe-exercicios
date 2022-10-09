@@ -2,16 +2,15 @@ import React from 'react';
 
 class Input extends React.Component {
   render() {
-   const { labelText, inputId, inputType, placeHolder, inputName, state, ...otherProps } = this.props
-   const currentState = {...state};
-   const controlledValue = currentState[inputName];
+  const { labelText, inputId, inputType, placeHolder, inputName, state, ...otherProps } = this.props
+  const valueAttr = state ? state[inputName] : '';
 
    if (labelText) { 
     return (
       <div className='input-wrapper'>
         <label htmlFor={inputId}>{labelText} {inputType === 'radio' ? null : <br/>}
           <input
-            value={controlledValue}  
+            value={valueAttr}  
             id={inputId}
             type={inputType}
             placeholder={placeHolder}
@@ -24,7 +23,7 @@ class Input extends React.Component {
       return (
         <div className='input-wrapper'>
           <input  
-            value={controlledValue}  
+            value={valueAttr}  
             id={inputId}
             type={inputType}
             placeholder={placeHolder}
