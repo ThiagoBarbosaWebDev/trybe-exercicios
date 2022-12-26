@@ -1,6 +1,6 @@
 const connection = require('./connection');
 
-const findAllDrivers = async () => {
+const getDrivers = async () => {
   const [result] = await connection.execute('SELECT * FROM drivers');
   return result;
 };
@@ -11,6 +11,6 @@ const getDriversById = async (id) => {
 };
 
 module.exports = {
-  findAllDrivers,
+  getDrivers,
   getDriversById,
 };

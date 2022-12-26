@@ -4,7 +4,7 @@ const { driverModel } = require('../../../src/models');
 const { driverService } = require('../../../src/services');
 const { mockModelFindAllDriversResult } = require('./mocks/driver.service.mock');
 
-describe.only('Testes de unidade do service de drivers', function () {
+describe('Testes de unidade do service de drivers', function () {
   afterEach(sinon.restore);
   it('Realizando uma operação getDrivers com o service drivers', async function () {
     //  Arrange
@@ -13,8 +13,6 @@ describe.only('Testes de unidade do service de drivers', function () {
   
     // Act
     const expectedResult = await driverService.getDrivers();
-    console.log('expected', expectedResult)
-    console.log('mock', mockModelFindAllDriversResult)
     // Assert
     expect(expectedResult).to.be.deep.equal(mockedExpectedResult);
   });

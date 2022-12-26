@@ -1,10 +1,10 @@
 const express = require('express');
 const { postCar, getCarById } = require('./models/car.model');
 const connection = require('./models/connection');
-const { driverModel } = require('./models');
+const { getDrivers, getDriversById } = require('./models/driver.model');
 const { insert } = require('./models/driver_car.model');
 const travelModel = require('./models/travel.model');
-const { driverService, carService } = require('./services');
+
 const app = express();
 
 app.use(express.json());
@@ -102,14 +102,15 @@ app.put('/drivers/:driverId/travels/:travelId/end', async (req, res) => {
 });
 
 app.get('/drivers', async (req, res) => {
-  const result = await driverService.getDrivers();
+  const result = await getDrivers();
   res.status(200).json(result);
 });
 
 app.post('/cars', async (req, res) => {
   const { body } = req;
-  const result = await carService.createCar(body);
-  res.status(200).json(result);
+  console.log('entrei');
+  const result = await postCar(body);
+  res.status(200).json({ message: result });
 });
 
 app.post('/cars/:id', async (req, res) => {
@@ -120,7 +121,7 @@ app.post('/cars/:id', async (req, res) => {
 
 app.get('/drivers/:id', async (req, res) => {
   const { id } = req.params;
-  const result = await driverModel.getDriversById(id);
+  const result = await getDriversById(id);
   res.status(200).json(result);
 });
 
